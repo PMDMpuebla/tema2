@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://pmdmpuebla.github.io/tema2/kotlin/variables-tipos-datos/">
+        <link rel="canonical" href="https://pmdmpuebla.github.io/tema2/kotlin/null-safety/">
       
       
-        <link rel="prev" href="../introduccion/">
+        <link rel="prev" href="../funciones/">
       
       
-        <link rel="next" href="../operadores/">
+        <link rel="next" href="../clases-objetos/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Variables y tipos de datos - Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 2</title>
+        <title>Null safety - Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 2</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#variables-y-tipos-de-datos-en-kotlin" class="md-skip">
+        <a href="#null-safety-en-kotlin" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Variables y tipos de datos
+              Null safety
             
           </span>
         </div>
@@ -336,37 +336,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Variables y tipos de datos
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../variables-tipos-datos/" class="md-nav__link">
         
   
   
@@ -382,87 +355,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#declaracion-de-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Declaración de variables
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Declaración de variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mutabilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mutabilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tipos-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tipos de datos
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-de-uso-de-variables-y-tipos-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejemplo de uso de variables y tipos de datos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comentarios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comentarios
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -584,10 +476,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../null-safety/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Null safety
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -603,6 +522,65 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operador-de-llamada-segura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operador de llamada segura ?.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operador de llamada segura ?.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operador-elvis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operador Elvis ?:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-let" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Función let
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -863,33 +841,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#declaracion-de-variables" class="md-nav__link">
+  <a href="#operador-de-llamada-segura" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Declaración de variables
+        Operador de llamada segura ?.
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Declaración de variables">
+    <nav class="md-nav" aria-label="Operador de llamada segura ?.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mutabilidad" class="md-nav__link">
+  <a href="#operador-elvis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mutabilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tipos-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tipos de datos
+        Operador Elvis ?:
       
     </span>
   </a>
@@ -902,21 +869,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso-de-variables-y-tipos-de-datos" class="md-nav__link">
+  <a href="#funcion-let" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo de uso de variables y tipos de datos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comentarios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comentarios
+        Función let
       
     </span>
   </a>
@@ -940,110 +896,29 @@
 
 
 
-<h1 id="variables-y-tipos-de-datos-en-kotlin">Variables y tipos de datos en Kotlin</h1>
-<p>Vamos a comenzar por lo básico: las variables y los tipos de datos en Kotlin. En esta sección, aprenderemos cómo declarar variables, los diferentes tipos de datos disponibles y cómo utilizarlos en nuestros programas.</p>
-<h2 id="declaracion-de-variables">Declaración de variables</h2>
-<p>Comenzaremos por la declaración de variables. En Kotlin, podemos declarar variables utilizando las palabras clave <code>val</code> y <code>var</code>. La diferencia entre ambas es que <code>val</code> se utiliza para declarar variables inmutables (constantes), mientras que <code>var</code> se utiliza para declarar variables mutables.</p>
-<p>La sintaxis básica para declarar una variable es la siguiente:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">nombreVariable</span><span class="p">:</span><span class="w"> </span><span class="n">TipoDeDato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valorInicial</span>
+<h1 id="null-safety-en-kotlin">Null-Safety en Kotlin</h1>
+<p>Una de las características más destacadas de Kotlin es su sistema de null-safety, que ayuda a prevenir errores relacionados con valores nulos en tiempo de compilación. En Kotlin, los tipos de datos son no nulos por defecto, lo que significa que no se puede asignar un valor nulo a una variable a menos que se indique explícitamente que puede ser nula.</p>
+<p>Para declarar una variable que pueda ser nula, debemos usar el operador <code>?</code> después del tipo de dato. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="c1">// La variable nombre puede ser nula</span>
+<span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Juan"</span><span class="w"> </span><span class="c1">// Asignamos un valor no nulo a la variable</span>
 </code></pre></div>
-<p>Donde <code>nombreVariable</code> es el nombre que le damos a la variable, <code>TipoDeDato</code> es el tipo de dato que queremos asignarle y <code>valorInicial</code> es el valor que queremos asignar a la variable.</p>
-<h3 id="mutabilidad">Mutabilidad</h3>
-<p>Como hemos comentado, <code>val</code> se utiliza para declarar variables inmutables, lo que significa que una vez que se les asigna un valor, no se puede cambiar. Por otro lado, <code>var</code> se utiliza para declarar variables mutables, lo que significa que su valor puede cambiar a lo largo del tiempo.</p>
-<p>El concepto de mutabilidad es importante en la programación, ya que nos permite controlar el estado de nuestras variables y evitar errores relacionados con cambios inesperados en su valor.</p>
-<p>Cuando se declara una variable con <code>val</code>, se garantiza que su valor no cambiará, lo que puede ayudar a prevenir errores y hacer que nuestro código sea más seguro y fácil de entender. Por otro lado, cuando se declara una variable con <code>var</code>, debemos tener cuidado al modificar su valor, ya que esto puede llevar a errores si no se maneja correctamente.</p>
-<h3 id="tipos-de-datos">Tipos de datos</h3>
-<p>Vamos a ver los tipos de datos más comunes en Kotlin. Algunos de los tipos de datos más utilizados son:</p>
-<table>
-<thead>
-<tr>
-<th>Tipo de dato</th>
-<th>Descripción</th>
-<th>Rango de valores</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Int</td>
-<td>Enteros</td>
-<td>-2,147,483,648 a 2,147,483,647</td>
-</tr>
-<tr>
-<td>Long</td>
-<td>Enteros largos</td>
-<td>-9,223,372,036,854,775,808 a 9,223,372,036,854,775,807</td>
-</tr>
-<tr>
-<td>Float</td>
-<td>Números decimales de precisión simple</td>
-<td>Aproximadamente ±3.40282347E+38F (6-7 dígitos decimales)</td>
-</tr>
-<tr>
-<td>Double</td>
-<td>Números decimales de precisión doble</td>
-<td>Aproximadamente ±1.79769313486231570E+308 (15-16 dígitos decimales)</td>
-</tr>
-<tr>
-<td>Boolean</td>
-<td>Valores lógicos (verdadero o falso)</td>
-<td>true o false</td>
-</tr>
-<tr>
-<td>String</td>
-<td>Cadenas de texto</td>
-<td>Secuencia de caracteres Unicode</td>
-</tr>
-<tr>
-<td>Char</td>
-<td>Caracteres individuales</td>
-<td>Un solo carácter Unicode</td>
-</tr>
-</tbody>
-</table>
-<p>Más adelante, veremos cómo crear nuestros propios tipos de datos y cómo utilizarlos en nuestros programas. Por ahora, es importante familiarizarse con estos tipos de datos básicos y entender cómo se utilizan en Kotlin.</p>
-<h2 id="ejemplo-de-uso-de-variables-y-tipos-de-datos">Ejemplo de uso de variables y tipos de datos</h2>
-<p>Veamos un ejemplo sencillo de cómo declarar y utilizar variables en Kotlin:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Juan"</span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span>
-<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Nombre: </span><span class="si">$</span><span class="n">nombre</span><span class="s">"</span><span class="p">)</span>
-<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Edad: </span><span class="si">$</span><span class="n">edad</span><span class="s">"</span><span class="p">)</span>
-<span class="w">    </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="c1">// Cambiamos el valor de la variable mutable</span>
-<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Edad actualizada: </span><span class="si">$</span><span class="n">edad</span><span class="s">"</span><span class="p">)</span>
+<p>El uso de <code>?</code> permite que la variable <code>nombre</code> pueda contener un valor nulo, mientras que si no se utiliza, la variable no podrá ser nula y el compilador generará un error si intentamos asignarle un valor nulo.</p>
+<p>Existen varias formas de manejar valores nulos en Kotlin, como el operador de llamada segura <code>?.</code>, el operador Elvis <code>?:</code>, y la función <code>let</code>. A continuación, se presentan algunos ejemplos de cómo utilizar estas herramientas para trabajar con valores nulos de manera segura.</p>
+<h3 id="operador-de-llamada-segura">Operador de llamada segura <code>?.</code></h3>
+<p>El operador de llamada segura <code>?.</code> nos permite acceder a las propiedades o métodos de un objeto solo si este no es nulo. Si el objeto es nulo, la expresión completa devuelve null en lugar de lanzar una excepción. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">longitud</span><span class="p">:</span><span class="w"> </span><span class="kt">Int?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="o">?.</span><span class="na">length</span><span class="w"> </span><span class="c1">// Devuelve la longitud del nombre si no es nulo, de lo contrario devuelve null</span>
+</code></pre></div>
+<h4 id="operador-elvis">Operador Elvis <code>?:</code></h4>
+<p>El operador Elvis <code>?:</code> nos permite proporcionar un valor predeterminado en caso de que una expresión sea nula. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">longitud</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="o">?.</span><span class="na">length</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="c1">// Devuelve la longitud del nombre si no es nulo, de lo contrario devuelve 0</span>
+</code></pre></div>
+<h3 id="funcion-let">Función <code>let</code></h3>
+<p>La función <code>let</code> nos permite ejecutar un bloque de código solo si el objeto no es nulo. Dentro del bloque, podemos acceder al objeto utilizando la palabra clave <code>it</code>. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="o">?.</span><span class="na">let</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"El nombre tiene </span><span class="si">${</span><span class="nb">it</span><span class="p">.</span><span class="na">length</span><span class="si">}</span><span class="s"> caracteres"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Veamos algunos puntos importantes de este ejemplo:</p>
-<ol>
-<li>Hemos declarado una variable inmutable <code>nombre</code> de tipo <code>String</code> y le hemos asignado el valor "Juan".</li>
-<li>Hemos declarado una variable mutable <code>edad</code> de tipo <code>Int</code> y le hemos asignado el valor 25.</li>
-<li>Hemos utilizado la función <code>println</code> para imprimir los valores de las variables en la consola.</li>
-<li>Hemos cambiado el valor de la variable <code>edad</code> a 26, demostrando que las variables mutables pueden ser modificadas.</li>
-</ol>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Habrás visto que hemos utilizado la interpolación de cadenas para imprimir los valores de las variables. Esto nos permite incluir el valor de una variable dentro de una cadena de texto utilizando el símbolo <code>$</code> seguido del nombre de la variable. Esto permite realizar operaciones de concatenación de manera más sencilla y legible.</p>
-</div>
-<h2 id="comentarios">Comentarios</h2>
-<p>Antes de continuar, es importante mencionar que en Kotlin podemos agregar comentarios a nuestro código para explicar su funcionamiento o para dejar notas para nosotros mismos o para otros desarrolladores. Los comentarios no afectan la ejecución del programa y son ignorados por el compilador.</p>
-<p>Podemos encontrar dos tipos de comentarios en Kotlin:</p>
-<ul>
-<li><strong>Comentarios de una sola línea</strong>: Se utilizan para agregar comentarios breves en una sola línea. Se escriben utilizando el símbolo <code>//</code>. Por ejemplo:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1">// Este es un comentario de una sola línea</span>
-<span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Juan"</span><span class="w"> </span><span class="c1">// Declaramos una variable inmutable</span>
-</code></pre></div>
-<ul>
-<li><strong>Comentarios de varias líneas</strong>: Se utilizan para agregar comentarios más extensos que abarcan varias líneas. Se escriben utilizando los símbolos <code>/*</code> al inicio y <code>*/</code> al final del comentario. Por ejemplo:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
-<span class="cm">Este es un comentario de varias líneas.</span>
-<span class="cm">Podemos utilizarlo para explicar el funcionamiento de un bloque de código o para dejar notas más detalladas.</span>
-<span class="cm">*/</span>
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Existe un tercer tipo de comentario llamado <strong>comentario de documentación</strong>, que se utiliza para generar documentación automática del código. Se escribe utilizando los símbolos <code>/**</code> al inicio y <code>*/</code> al final del comentario. Utiliza la misma sintaxis de Javadoc y permite agregar etiquetas especiales para describir parámetros, valores de retorno y excepciones.</p>
-</div>
+<p>En este ejemplo, el bloque de código dentro de <code>let</code> solo se ejecutará si <code>nombre</code> no es nulo, y podremos acceder a su longitud utilizando <code>it.length</code>.</p>
 
 
 
@@ -1073,7 +948,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../introduccion/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introducción">
+          <a href="../funciones/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Funciones">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1083,20 +958,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Introducción
+                Funciones
               </div>
             </div>
           </a>
         
         
           
-          <a href="../operadores/" class="md-footer__link md-footer__link--next" aria-label="Next: Operadores">
+          <a href="../clases-objetos/" class="md-footer__link md-footer__link--next" aria-label="Next: Clases y objetos">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Operadores
+                Clases y objetos
               </div>
             </div>
             <div class="md-footer__button md-icon">

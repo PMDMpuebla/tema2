@@ -626,6 +626,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../null-safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Null safety
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../clases-objetos/" class="md-nav__link">
         
   
@@ -1037,11 +1065,20 @@
 <p>Se parece mucho a la estructura <code>switch</code> de otros lenguajes, pero con más funcionalidades. Podemos evaluar cualquier tipo de expresión y no solo valores constantes. Además, podemos utilizar rangos, tipos y condiciones más complejas.</p>
 <p>Veamos un ejemplo de cómo utilizar <code>when</code> para evaluar diferentes valores:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
-<span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">when</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">"El número es par"</span><span class="p">)</span>
 <span class="w">    </span><span class="n">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">"El número es impar"</span><span class="p">)</span>
 <span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">"El número es cero"</span><span class="p">)</span>
 <span class="p">}</span>
+</code></pre></div>
+<p>También podemos utilizar <code>when</code> como una expresión que devuelve un valor, lo que nos permite asignar el resultado de la evaluación a una variable:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
+<span class="kd">val</span><span class="w"> </span><span class="nv">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"El número es par"</span>
+<span class="w">    </span><span class="n">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"El número es impar"</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"El número es cero"</span>
+<span class="p">}</span>
+<span class="n">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span><span class="w"> </span><span class="c1">// Imprime: El número es impar</span>
 </code></pre></div>
 <h2 id="estructuras-de-control-repetitivas">Estructuras de control Repetitivas</h2>
 <p>Las estructuras de control repetitivas nos permiten ejecutar un bloque de código varias veces mientras se cumpla una determinada condición. En Kotlin, las principales estructuras de control repetitivas son <code>for</code>, <code>while</code> y <code>do-while</code>.</p>

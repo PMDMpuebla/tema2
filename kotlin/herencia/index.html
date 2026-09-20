@@ -479,6 +479,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../null-safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Null safety
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../clases-objetos/" class="md-nav__link">
         
   
@@ -627,6 +655,17 @@
     <span class="md-ellipsis">
       
         Clases abstractas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polimorfismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Polimorfismo
       
     </span>
   </a>
@@ -919,6 +958,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#polimorfismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Polimorfismo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#extensiones-de-clases" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1030,6 +1080,18 @@
 </code></pre></div>
 <p>En este ejemplo, hemos definido una clase abstracta <code>Animal</code> que contiene un método abstracto <code>hacerSonido()</code>. Las clases derivadas <code>Perro</code> y <code>Gato</code> implementan el método <code>hacerSonido()</code> proporcionando su propia implementación que imprime un mensaje indicando el sonido que hace cada animal.</p>
 <p>El uso de clases abstractas nos permite definir una interfaz común para un grupo de clases relacionadas, mientras que las clases derivadas proporcionan implementaciones específicas para los métodos abstractos. Esto fomenta la reutilización de código y la creación de jerarquías de clases más flexibles y mantenibles.</p>
+<h2 id="polimorfismo">Polimorfismo</h2>
+<p>El polimorfismo es un concepto fundamental en la programación orientada a objetos que permite que diferentes clases puedan ser tratadas de manera uniforme a través de una interfaz común. En Kotlin, podemos lograr el polimorfismo mediante la herencia y la implementación de interfaces.</p>
+<p>También podemos definir varias funciones que tengan el mismo nombre pero diferentes parámetros, lo que se conoce como sobrecarga de funciones. Por ejemplo, podemos agregar un método <code>saludar</code> adicional a la clase <code>Persona</code> que acepte un parámetro opcional para personalizar el saludo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Hola, mi nombre es </span><span class="si">$</span><span class="n">nombre</span><span class="s"> y tengo </span><span class="si">$</span><span class="n">edad</span><span class="s"> años."</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">saludo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"</span><span class="si">$</span><span class="n">saludo</span><span class="s">, mi nombre es </span><span class="si">$</span><span class="n">nombre</span><span class="s"> y tengo </span><span class="si">$</span><span class="n">edad</span><span class="s"> años."</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="extensiones-de-clases">Extensiones de clases</h2>
 <p>Kotlin tiene casos especiales donde se puede extender una clase sin necesidad de heredar de ella. Esto se logra mediante las funciones de extensión, que nos permiten agregar nuevas funcionalidades a las clases existentes sin modificar su código fuente. Por ejemplo, podemos agregar una función de extensión <code>saludar()</code> a la clase <code>String</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="nf">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
