@@ -30,6 +30,7 @@ nav:
       - Estructuras de control: kotlin/estructuras-control.md
       - Collecciones: kotlin/colecciones.md
       - Funciones: kotlin/funciones.md
+      - Null safety: kotlin/null-safety.md
       - Clases y objetos: kotlin/clases-objetos.md
       - Herencia: kotlin/herencia.md
       - Interfaces: kotlin/interfaces.md

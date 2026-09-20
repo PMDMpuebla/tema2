@@ -116,6 +116,23 @@ En este ejemplo, hemos definido una clase abstracta `Animal` que contiene un mé
 
 El uso de clases abstractas nos permite definir una interfaz común para un grupo de clases relacionadas, mientras que las clases derivadas proporcionan implementaciones específicas para los métodos abstractos. Esto fomenta la reutilización de código y la creación de jerarquías de clases más flexibles y mantenibles.
 
+## Polimorfismo
+
+El polimorfismo es un concepto fundamental en la programación orientada a objetos que permite que diferentes clases puedan ser tratadas de manera uniforme a través de una interfaz común. En Kotlin, podemos lograr el polimorfismo mediante la herencia y la implementación de interfaces.
+
+También podemos definir varias funciones que tengan el mismo nombre pero diferentes parámetros, lo que se conoce como sobrecarga de funciones. Por ejemplo, podemos agregar un método `saludar` adicional a la clase `Persona` que acepte un parámetro opcional para personalizar el saludo:
+
+```kotlin
+class Persona(val nombre: String, var edad: Int) {
+    fun saludar() {
+        println("Hola, mi nombre es $nombre y tengo $edad años.")
+    }
+    fun saludar(saludo: String) {
+        println("$saludo, mi nombre es $nombre y tengo $edad años.")
+    }
+}
+```
+
 ## Extensiones de clases
 
 Kotlin tiene casos especiales donde se puede extender una clase sin necesidad de heredar de ella. Esto se logra mediante las funciones de extensión, que nos permiten agregar nuevas funcionalidades a las clases existentes sin modificar su código fuente. Por ejemplo, podemos agregar una función de extensión `saludar()` a la clase `String`:

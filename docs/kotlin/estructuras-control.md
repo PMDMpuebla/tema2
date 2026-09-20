@@ -67,11 +67,23 @@ Veamos un ejemplo de cómo utilizar `when` para evaluar diferentes valores:
 
 ```kotlin
 val numero = 3
-when (numero) {
+when {
     numero % 2 == 0 -> println("El número es par")
     numero % 2 != 0 -> println("El número es impar")
     else -> println("El número es cero")
 }
+```
+
+También podemos utilizar `when` como una expresión que devuelve un valor, lo que nos permite asignar el resultado de la evaluación a una variable:
+
+```kotlin
+val numero = 3
+val resultado = when {
+    numero % 2 == 0 -> "El número es par"
+    numero % 2 != 0 -> "El número es impar"
+    else -> "El número es cero"
+}
+println(resultado) // Imprime: El número es impar
 ```
 
 ## Estructuras de control Repetitivas

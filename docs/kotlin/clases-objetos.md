@@ -101,19 +101,4 @@ data class Persona(val nombre: String, var edad: Int)
 
 Esto es muy útil cuando queremos crear clases que representen entidades de datos, ya que nos ahorra tiempo al generar automáticamente los métodos mencionados anteriormente.
 
-### Polimorfismo
 
-El polimorfismo es un concepto fundamental en la programación orientada a objetos que permite que diferentes clases puedan ser tratadas de manera uniforme a través de una interfaz común. En Kotlin, podemos lograr el polimorfismo mediante la herencia y la implementación de interfaces.
-
-También podemos definir varias funciones que tengan el mismo nombre pero diferentes parámetros, lo que se conoce como sobrecarga de funciones. Por ejemplo, podemos agregar un método `saludar` adicional a la clase `Persona` que acepte un parámetro opcional para personalizar el saludo:
-
-```kotlin
-class Persona(val nombre: String, var edad: Int) {
-    fun saludar() {
-        println("Hola, mi nombre es $nombre y tengo $edad años.")
-    }
-    fun saludar(saludo: String) {
-        println("$saludo, mi nombre es $nombre y tengo $edad años.")
-    }
-}
-```
