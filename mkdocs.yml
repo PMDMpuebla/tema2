@@ -1,0 +1,41 @@
+site_name: Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 2
+site_description: Introducción a Android - Tema 2 del módulo PMDM
+site_url: https://pmdmpuebla.github.io/tema2/
+theme:
+  name: material
+  palette:
+    primary: 'purple'
+    accent: 'indigo'
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: img/alogo.png
+  features:
+    - navigation.footer
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+extra:
+  generator: false
+extra_css:
+  - css/style.css
+nav:
+  - Home: index.md
+  - Introducción: introduccion.md
+  - El lenguaje kotlin:
+      - Introducción: kotlin/introduccion.md
+      - Variables y tipos de datos: kotlin/variables-tipos-datos.md
+      - Operadores: kotlin/operadores.md
+      - Estructuras de control: kotlin/estructuras-control.md
+      - Collecciones: kotlin/colecciones.md
+      - Funciones: kotlin/funciones.md
+      - Clases y objetos: kotlin/clases-objetos.md
+      - Herencia: kotlin/herencia.md
+      - Interfaces: kotlin/interfaces.md
+  - Desarrollo de aplicaciones Android con Kotlin:
+      - Introducción: android/introduccion.md
+      - Uso de Kotlin en Android: android/uso-kotlin-android.md
+  - Referencias: referencias.md
+copyright: Copyright &copy; 2026 Víctor Suárez. IES Puebla de Vicar.
+
